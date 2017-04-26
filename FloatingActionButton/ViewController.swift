@@ -9,10 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var fab: FloatingActionButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        fab.addElement(title: "あいうえお", image: #imageLiteral(resourceName: "Image")) {
+            
+        }
+        
+        fab.addElement(title: "かきくけこ", image: #imageLiteral(resourceName: "Image")) {
+            
+        }
+        fab.addElement(title: "さしすせそ", image: #imageLiteral(resourceName: "Image")) {
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
